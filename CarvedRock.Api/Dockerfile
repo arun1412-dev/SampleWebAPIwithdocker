@@ -4,7 +4,7 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["CarvedRock.Api/CarvedRock.Api.csproj", "CarvedRock.Api/"]
+COPY ["CarvedRock.Api.csproj", "CarvedRock.Api/"]
 RUN dotnet restore "CarvedRock.Api/CarvedRock.Api.csproj"
 COPY . .
 WORKDIR "/src/CarvedRock.Api"
